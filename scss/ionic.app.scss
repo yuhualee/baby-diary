@@ -15,7 +15,9 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$stable:                          #f1f1f1 !default;
 $positive:                        #ff3355 !default;
+$grey:                            #e6e6e6 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -23,4 +25,26 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+.pane{
+	background-color: $grey;
+}
+.register{
+	.upload-avatar{
+		text-align: center;
+
+		.up-button{
+			display: block;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background-color: $dark;
+			border: 3px solid $light;
+			margin: 0 auto;
+			overflow: hidden;
+			input{
+				opacity: 0;
+			}
+		}
+	}
+}
 

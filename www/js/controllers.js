@@ -19,5 +19,5 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('TestCtrl', function($scope) {
+.controller('RegisterCtrl', function($scope) {
 });
