@@ -1,0 +1,50 @@
+<ion-view view-title="写日记" class="register">
+  <ion-nav-bar class="bar-stable bar-assertive" >
+    <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back button back-button">
+      <i class="icon ion-ios-arrow-back"></i>
+          返回
+    </ion-nav-back-button>
+    <ion-nav-buttons side="right">
+      <a href="#/tab/diary" class="button">保存</a>
+    </ion-nav-buttons>
+</ion-nav-bar>
+  <ion-content>
+    <ul class="list">
+      <li class="item">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </li>
+      <li class="item">
+        <i class="icon ion-android-cloud-outline"></i>
+        <i class="icon ion-android-happy"></i>
+        <i class="icon ion-android-microphone"></i>
+      </li>
+      <li class="item upload">
+        <img ng-src="https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png" alt="" style="width:80px;">
+        <span class="up-button">
+          <input type="file">
+        </span>
+      </li>
+    </ul>
+    <ul class="list">
+      <li class="item item-input item-icon-right">
+        <span class="input-label">时间</span>
+        <input type="text" placeholder="2015.04.29">
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </li>
+      <li class="item item-input item-icon-right">
+        <span class="input-label">地点</span>
+        <input type="text" placeholder="北京市朝阳区">
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </li>
+      <li class="item item-icon-right">
+        更多
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </li>
+    </ul>
+    <div class="tongbu">
+      <span class="label">同步</span>
+      <i class="icon ion-android-bulb"></i>
+      <i class="icon ion-android-bulb"></i>
+    </div>
+  </ion-content>
+</ion-view>

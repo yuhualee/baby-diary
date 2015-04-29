@@ -38,15 +38,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  // .state('write-diary', {
+  //     url: '/write',
+  //     templateUrl: 'templates/write-diary.html',
+  //     controller: 'WriteDiaryCtrl'
+  //   })
+
+
+  .state('tab.diary', {
+    url: '/diary',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-diary': {
+        templateUrl: 'templates/tab-diary.html',
+        controller: 'DiaryCtrl'
       }
     }
   })
+
+  .state('tab.diary-detail',{
+    url:'/diary/:diaryId',
+    views: {
+      'tab-diary':{
+        templateUrl: 'templates/diary-detail.html',
+        controller: 'DiaryDetailCtrl'
+      }
+    }
+  })
+
 
   .state('tab.chats', {
       url: '/chats',
@@ -85,10 +103,29 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'RegisterCtrl'
       }
     }
-  });
+  })
+  .state('tab.baby-info', {
+      url: '/register/babyinfo',
+      views: {
+        'tab-register': {
+          templateUrl: 'templates/baby-info.html',
+          controller: 'InfoCtrl'
+        }
+      }
+    })
+
+  .state('tab.write-diary', {
+      url: '/register/babyinfo/write',
+      views: {
+        'tab-register': {
+          templateUrl: 'templates/write-diary.html',
+          controller: 'WriteDiaryCtrl'
+        }
+      }
+    });
 
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/register');
 
 });
