@@ -67,7 +67,6 @@ angular.module('starter.services', [])
     birth: "两周6个月10天"
   }, {
     id: 1,
-    memorabilia: "第一上次坐飞机",
    weather: "ion-android-cloud-outline",
     mood: "ion-android-happy",
     content: "上班后，宝宝学习的来源，已经不再单一...她喜欢看动画片《米奇妙妙屋》《熊出没》最近迷恋上《爱探险的朵拉》中英文的....她喜欢里面的朵拉，她说像《采蘑菇的小姑娘》所以，她称呼她为小蘑菇...",

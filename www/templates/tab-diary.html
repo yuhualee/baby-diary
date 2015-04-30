@@ -1,4 +1,4 @@
-<ion-view view-title="日记">
+<ion-view view-title="日记" class="tab-diary">
   <ion-nav-bar class="bar-stable bar-assertive" >
     <ion-nav-buttons side="left">
         <button class="button button-icon icon ion-ios-search-strong"></button>
@@ -8,52 +8,59 @@
       </ion-nav-buttons>
   </ion-nav-bar>
 
-  <ion-content class="padding">
-  <ion-list class="list">
-    <ion-item class="item item-avatar" href="#/tab/register/babyinfo">
+  <ion-content>
+    <ion-item class="item item-avatar info">
       <img src="http://www.qqzhi.com/uploadpic/2014-09-30/004536695.jpg" alt="">
-      <h2>Hu minghan</h2>
+      <h2>小狐狸</h2>
       <p>2周6个月9天</p>
     </ion-item>
-  </ion-list>
-
-  <ion-list class="list card" ng-repeat="diary in diarys">
-    <ion-item class="item">
-      <span class="birth">{{diary.birth}}</span>
-      <span class="time item-note">{{diary.time}}</span>
-    </ion-item>
-    <ion-item class="item item-divider">
-      <h2 class="title">{{diary.memorabilia}}</h2>
-      <div class="item-note">
-        <i class="icon {{diary.weather}}"></i>
-        <i class="icon {{diary.mood}}"></i>
-        <i class="icon {{diary.sound}}"></i>
+    <div class="diary-list">
+      <div class="card" ng-repeat="diary in diarys">
+        <ion-list class="">
+          <ion-item class="breif">
+            <span class="birth">{{diary.birth}}</span>
+            <span class="time item-note">{{diary.time}}</span>
+          </ion-item>
+          <ion-item class="item item-divider diary-hd">
+            <h2>{{diary.memorabilia}}</h2>
+            <div class="item-note">
+              <i class="icon {{diary.weather}}"></i>
+              <i class="icon {{diary.mood}}"></i>
+              <i class="icon {{diary.sound}}"></i>
+            </div>
+          </ion-item>
+          <ion-item class="item item-body diary-bd" href="#/tab/diary/{{diary.id}}">
+              <p class="content">
+                {{diary.content}}
+              </p>
+              <div class="pic-box">
+                <img ng-src="{{diary.img}}" alt=""><img ng-src="{{diary.img}}" alt="">
+              </div>
+              <p class="address">
+                <i class="icon ion-android-pin"></i>
+                {{diary.address}}
+              </p>
+              <p class="time">
+                <i class="icon ion-ios-clock"></i>
+                {{diary.name}},{{diary.time}}
+              </p>
+          </ion-item>
+            <ion-item class="item tabs tabs-secondary tabs-icon-left">
+              <a href="#" class="tab-item">
+                <i class="icon ion-compose"></i>
+                编辑
+              </a>
+              <a href="#" class="tab-item">
+                <i class="icon ion-android-share-alt"></i>
+                分享
+              </a>
+              <a href="#" class="tab-item">
+                <i class="icon ion-trash-a"></i>
+                删除
+              </a>
+          </ion-item>
+        </ion-list>
       </div>
-    </ion-item>
-    <ion-item class="item item-body" href="#/tab/diary/{{diary.id}}">
-        <img ng-src="{{diary.img}}" alt="" class="full-image">
-        <p class="content">
-          {{diary.content}}
-        </p>
-        <p class="address">{{diary.address}}</p>
-        <p class="time">
-          {{diary.name}},{{diary.time}}
-        </p>
-    </ion-item>
-      <ion-item class="item tabs tabs-secondary tabs-icon-left">
-        <a href="#" class="tab-item">
-          <i class="icon ion-compose"></i>
-          编辑
-        </a>
-        <a href="#" class="tab-item">
-          <i class="icon ion-android-share-alt"></i>
-          分享
-        </a>
-        <a href="#" class="tab-item">
-          <i class="icon ion-trash-a"></i>
-          删除
-        </a>
-    </ion-item>
-  </ion-list>
+    </div>
   </ion-content>
 </ion-view>

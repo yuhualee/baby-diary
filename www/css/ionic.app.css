@@ -7619,6 +7619,17 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.card, .list-inset {
+  border-radius: 5px; }
+
+.card .item:last-child, .list-inset .item:last-child {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+.card .item:first-child, .list-inset .item:first-child {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px; }
+
 .pane {
   background-color: #e6e6e6; }
 
@@ -7635,3 +7646,78 @@ a.button {
     overflow: hidden; }
     .register .upload-avatar .up-button input {
       opacity: 0; }
+
+.tab-diary .info {
+  background: url(../img/diary-top.jpg) center center no-repeat;
+  background-size: cover;
+  height: 150px;
+  padding: 90px 16px 0 84px; }
+  .tab-diary .info img {
+    max-width: 58px;
+    max-height: 58px;
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 3px 0 #666;
+    top: 76px;
+    left: 15px; }
+  .tab-diary .info h2 {
+    font-weight: bold; }
+  .tab-diary .info h2, .tab-diary .info p {
+    color: #fff;
+    text-shadow: 1px 1px 0 #666; }
+.tab-diary .diary-list {
+  padding: 0 10px 10px 10px; }
+  .tab-diary .diary-list .card {
+    margin: 0;
+    position: relative;
+    margin-top: 53px;
+    overflow: visible; }
+    .tab-diary .diary-list .card:before {
+      position: absolute;
+      left: 10px;
+      top: -53px;
+      bottom: 0;
+      content: "";
+      width: 4px;
+      background-color: #fff; }
+    .tab-diary .diary-list .card .list .breif {
+      background: none;
+      padding-left: 28px;
+      padding-right: 0;
+      font-size: 14px;
+      margin-top: -53px;
+      border-bottom: none; }
+      .tab-diary .diary-list .card .list .breif:before {
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        margin-top: -10px;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        background-color: #e6e6e6; }
+    .tab-diary .diary-list .card .list .diary-hd {
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px; }
+      .tab-diary .diary-list .card .list .diary-hd h2 {
+        float: left;
+        color: #ff3355; }
+    .tab-diary .diary-list .card .list .diary-bd .item-content {
+      padding: 0; }
+      .tab-diary .diary-list .card .list .diary-bd .item-content .pic-box {
+        overflow: hidden; }
+        .tab-diary .diary-list .card .list .diary-bd .item-content .pic-box img {
+          float: left;
+          width: 30%;
+          margin-right: 5%;
+          margin-bottom: 5%; }
+          .tab-diary .diary-list .card .list .diary-bd .item-content .pic-box img:nth-of-type(n+3) {
+            margin-right: 0; }
+      .tab-diary .diary-list .card .list .diary-bd .item-content p {
+        margin-top: 5px;
+        margin-bottom: 5px; }
+        .tab-diary .diary-list .card .list .diary-bd .item-content p.content {
+          margin-top: 0; }
+        .tab-diary .diary-list .card .list .diary-bd .item-content p.address, .tab-diary .diary-list .card .list .diary-bd .item-content p.time {
+          color: #e4c685; }
