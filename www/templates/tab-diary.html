@@ -34,7 +34,7 @@
                 {{diary.content}}
               </p>
               <div class="pic-box">
-                <img ng-src="{{diary.img}}" alt=""><img ng-src="{{diary.img}}" alt="">
+                <img ng-src="{{diary.img}}" alt="">
               </div>
               <p class="address">
                 <i class="icon ion-android-pin"></i>
@@ -54,7 +54,7 @@
                 <i class="icon ion-android-share-alt"></i>
                 分享
               </a>
-              <a href="#" class="tab-item">
+              <a href="#" class="tab-item" on-tap="showConfirm()";>
                 <i class="icon ion-trash-a"></i>
                 删除
               </a>

@@ -84,43 +84,23 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 			text-shadow: 1px 1px 0 #666;
 		}
 	}
+}
+.tab-diary,.diary-detail{
 	.diary-list{
 		padding: 0 10px 10px 10px;
-
 		.card{
 			margin: 0;
 			position: relative;
 			margin-top: 53px;
 			overflow: visible;
-			&:before{
-				position: absolute;
-				left: 10px;
-				top: -53px;
-				bottom: 0;
-				content: "";
-				width: 4px;
-				background-color: $light;
-			}
 			.list{
 				.breif{
 					background: none;
-					padding-left: 28px;
+					padding-left: 0;
 					padding-right: 0;
 					font-size: 14px;
 					margin-top: -53px;
 					border-bottom: none;
-					&:before{
-						position: absolute;
-						left: 2px;
-						top: 50%;
-						margin-top: -10px;
-						content: "";
-						width: 20px;
-						height: 20px;
-						border-radius: 50%;
-						border: 4px solid $light;
-						background-color: $lightgray;
-					}
 				}
 				.diary-hd{
 					border-top-right-radius: 5px;
@@ -131,20 +111,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 					}
 				}
 				.diary-bd{
+					padding-bottom: 10px;
 					.item-content{
 						padding: 0;
-						.pic-box{
-							overflow: hidden;
-							img{
-								float: left;
-								width: 30%;
-								margin-right: 5%;
-								margin-bottom: 5%;
-								&:nth-of-type(n+3){
-									margin-right: 0;
-								}
-							}
-						}
 						p{
 							margin-top: 5px;
 							margin-bottom: 5px;	
@@ -153,6 +122,8 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 							}
 							&.address,&.time{
 								color: $secondary;
+								font-size: 12px;
+								margin: 0;
 							}
 						}
 					}
@@ -160,5 +131,52 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 			}
 		}
 	}
-	
+}
+.tab-diary .diary-list .card{
+	&:before{
+		position: absolute;
+		left: 10px;
+		top: -53px;
+		bottom: 0;
+		content: "";
+		width: 4px;
+		background-color: $light;
+	}
+	.list{
+		.breif{
+			padding-left: 28px;
+			&:before{
+				position: absolute;
+				left: 2px;
+				top: 50%;
+				margin-top: -10px;
+				content: "";
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				border: 4px solid $light;
+				background-color: $lightgray;
+			}
+		}
+		.diary-hd .item-note .icon{
+			padding: 0 10px;
+		}
+		.diary-bd{
+			.pic-box{
+				overflow: hidden;
+				img{
+					float: left;
+					width: 30%;
+					margin-right: 5%;
+					margin-bottom: 5%;
+					&:nth-of-type(n+3){
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+.diary-detail .diary-list .card .list .breif .item-note .icon{
+	padding: 0 10px;
 }

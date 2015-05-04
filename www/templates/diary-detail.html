@@ -4,7 +4,7 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{diary.time}}">
+<ion-view view-title="{{diary.time}}" class="diary-detail">
 <ion-nav-bar class="bar-stable bar-assertive" >
     <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back button back-button">
     <i class="icon ion-ios-arrow-back"></i>
@@ -14,48 +14,35 @@
         <button class="button button-icon icon ion-more" ng-click="show()"></button>
       </ion-nav-buttons>
 </ion-nav-bar>
-  <ion-content class="padding">
-
-    <ion-list class="list card">
-      <ion-item class="item item-divider">
-        <span class="birth">{{diary.birth}}</span>
-        <div class="item-note">
-          <i class="icon {{diary.weather}}"></i>
-          <i class="icon {{diary.mood}}"></i>
-          <i class="icon {{diary.sound}}"></i>
-        </div>
-      </ion-item>
-      <ion-item class="item item-body">
-        <h2 class="title">{{diary.memorabilia}}</h2>
-        <p class="content">
-          {{diary.content}}
-        </p>
-        <div class="pic-box">
-          <img ng-src="{{diary.img}}" alt="" class="full-image">
-        </div>
-        <p class="address">
-          <i class="icon ion-android-pin"></i>
-          {{diary.address}}
-        </p>
-        <p class="time">
-          {{diary.name}},{{diary.time}}
-        </p>
-      </ion-item>
-        <ion-item class="item tabs tabs-secondary tabs-icon-left">
-          <a href="#" class="tab-item">
-            <i class="icon ion-compose"></i>
-            编辑
-          </a>
-          <a href="#" class="tab-item">
-            <i class="icon ion-chatbox-working"></i>
-            评论
-          </a>
-          <a href="#" class="tab-item">
-            <i class="icon ion-android-share-alt"></i>
-            分享
-          </a>
-      </ion-item>
-    </ion-list>
-
+  <ion-content class="diary-list">
+      <div class="card">
+        <ion-list class="">
+          <ion-item class="breif">
+            <span class="birth">{{diary.birth}}</span>
+            <div class="item-note">
+              <i class="icon {{diary.weather}}"></i>
+              <i class="icon {{diary.mood}}"></i>
+              <i class="icon {{diary.sound}}"></i>
+            </div>
+          </ion-item>
+          <ion-item class="item item-divider diary-hd">
+            <h2>{{diary.memorabilia}}</h2>
+          </ion-item>
+          <ion-item class="item item-body diary-bd" href="#/tab/diary/{{diary.id}}">
+              <p class="content">
+                {{diary.content}}
+              </p>
+              <img ng-src="{{diary.img}}" alt="" class="full-image" on-hold="picShow()">
+              <p class="address">
+                <i class="icon ion-android-pin"></i>
+                {{diary.address}}
+              </p>
+              <p class="time">
+                <i class="icon ion-ios-clock"></i>
+                {{diary.name}},{{diary.time}}
+              </p>
+          </ion-item>
+        </ion-list>
+    </div>
   </ion-content>
 </ion-view>

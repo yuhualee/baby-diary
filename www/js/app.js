@@ -65,6 +65,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  // .state('diary-detail', {
+  //     url: '/:diaryId',
+  //     templateUrl: 'templates/diary-detail.html',
+  //     controller: 'DiaryDetailCtrl'
+  //   })
 
   .state('tab.chats', {
       url: '/chats',
