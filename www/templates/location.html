@@ -1,0 +1,25 @@
+<ion-view view-title="" class="location">
+  <ion-nav-bar class="bar-stable bar-assertive" >
+  </ion-nav-bar>
+  <div class="bar bar-stable bar-assertive bar-header item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="搜索附近的位置">
+    </label>
+    <button class="button button-clear">
+      Cancel
+    </button>
+  </div>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-radio" ng-repeat="location in locations">
+        <input type="radio" name="group" checked>
+        <div class="item-content">
+          <h2>{{location.name}}</h2>
+          <p>{{location.address}}</p>
+        </div>
+        <i class="icon radio-icon ion-checkmark"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,4 +1,4 @@
-<ion-view view-title="写日记" class="register">
+<ion-view view-title="写日记" class="write-diary">
   <ion-nav-bar class="bar-stable bar-assertive" >
     <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back button back-button">
       <i class="icon ion-ios-arrow-back"></i>
@@ -10,39 +10,52 @@
 </ion-nav-bar>
   <ion-content>
     <ul class="list">
-      <li class="item">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+      <li class="item item-textarea">
+        <textarea name="" id="" cols="30" rows="10" placeholder="你想写点什么..."></textarea>
       </li>
-      <li class="item">
+      <li class="item item-upload">
+        <span class="avatar-button" style="background-image:url(../img/pic-01.jpeg);">
+          <input type="file">
+        </span>
+        <span class="avatar-button" style="background-image:url(../img/pic-02.jpeg);">
+          <input type="file">
+        </span>
+        <span class="avatar-button" style="background-image:url(../img/pic-03.jpeg);">
+          <input type="file">
+        </span>
+        <span class="avatar-button" style="background-image:url(../img/pic-04.jpeg);">
+          <input type="file">
+        </span>
+        <span class="avatar-button">
+          <input type="file">
+        </span>
+      </li>
+      <li class="item item-opr">
         <i class="icon ion-android-cloud-outline"></i>
         <i class="icon ion-android-happy"></i>
         <i class="icon ion-android-microphone"></i>
-      </li>
-      <li class="item upload">
-        <img ng-src="https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png" alt="" style="width:80px;">
-        <span class="up-button">
-          <input type="file">
-        </span>
+        <i class="icon ion-bookmark"></i>
       </li>
     </ul>
     <ul class="list">
       <li class="item item-input item-icon-right">
         <span class="input-label">时间</span>
-        <input type="text" placeholder="2015.04.29">
+        <input type="date">
         <i class="icon ion-chevron-right icon-accessory"></i>
       </li>
-      <li class="item item-input item-icon-right">
+      <li class="item item-input item-icon-right" href="#/location">
         <span class="input-label">地点</span>
-        <input type="text" placeholder="北京市朝阳区">
+        北京市朝阳区
         <i class="icon ion-chevron-right icon-accessory"></i>
       </li>
+    </ul>
+    <ul class="list">
       <li class="item item-icon-right">
         更多
         <i class="icon ion-chevron-right icon-accessory"></i>
       </li>
     </ul>
     <div class="tongbu">
-      <span class="label">同步</span>
       <i class="icon ion-android-bulb"></i>
       <i class="icon ion-android-bulb"></i>
     </div>

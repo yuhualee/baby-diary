@@ -46,6 +46,10 @@ angular.module('starter.controllers', [])
 .controller('RegisterCtrl', function($scope) {
 })
 
+.controller('LocationCtrl', function($scope, Locations) {
+  $scope.locations = Locations.all();
+})
+
 .controller('InfoCtrl', function($scope) {
 })
 

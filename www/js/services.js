@@ -49,6 +49,35 @@ angular.module('starter.services', [])
   };
 })
 
+.factory('Locations', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var locations = [{
+    name: '不显示地址',
+    address: ''
+  }, {
+    name: '北京市',
+    address: ''
+  }, {
+    name: '北京市朝阳区',
+    address: ''
+  }, {
+    name: '写意人生港式茶餐厅',
+    address: '甘露园南里25号朝阳尚街购物中心3层'
+  }, {
+    name: '朝阳花园',
+    address: '北京市朝阳区甘露园南里25号'
+  }];
+
+
+  return {
+    all: function() {
+      return locations;
+    }
+  };
+})
+
 .factory('Diarys', function() {
   // Might use a resource here that returns a JSON array
 

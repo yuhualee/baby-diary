@@ -7619,6 +7619,18 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.input-label {
+  max-width: 100px;
+  width: 20%;
+  color: #999999; }
+
+.item-icon-left .icon:before, .item-icon-right .icon:before {
+  color: #999999;
+  font-size: 18px; }
+
+.item-radio .radio-group {
+  width: 100%; }
+
 .card, .list-inset {
   border-radius: 5px; }
 
@@ -7633,6 +7645,10 @@ a.button {
 .pane {
   background-color: #e6e6e6; }
 
+.register .birth .item-note {
+  color: #ff3355;
+  text-align: center;
+  padding-right: 10px; }
 .register .upload-avatar {
   text-align: center; }
   .register .upload-avatar .up-button {
@@ -7646,6 +7662,42 @@ a.button {
     overflow: hidden; }
     .register .upload-avatar .up-button input {
       opacity: 0; }
+
+.write-diary .item-textarea {
+  padding: 10px 16px; }
+  .write-diary .item-textarea textarea {
+    width: 100%;
+    height: 150px; }
+.write-diary .item-upload {
+  border-top: none;
+  padding: 0 6px 6px 16px;
+  overflow: hidden; }
+  .write-diary .item-upload .avatar-button {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 88px;
+    height: 88px;
+    overflow: hidden;
+    background-image: url(../img/upload-bg.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 1px solid #f1f1f1; }
+    .write-diary .item-upload .avatar-button input[type="file"] {
+      font-size: 80px;
+      opacity: 0; }
+.write-diary .item-opr .icon {
+  padding: 0 15px;
+  font-size: 20px;
+  color: #999999; }
+.write-diary .tongbu {
+  padding: 0 16px;
+  color: #666; }
+  .write-diary .tongbu .icon {
+    padding: 16px;
+    font-size: 16px; }
 
 .tab-diary .info {
   background: url(../img/diary-top.jpg) center center no-repeat;
