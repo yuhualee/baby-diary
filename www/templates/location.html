@@ -6,14 +6,16 @@
       <i class="icon ion-ios-search placeholder-icon"></i>
       <input type="search" placeholder="搜索附近的位置">
     </label>
-    <button class="button button-clear">
-      Cancel
-    </button>
   </div>
   <ion-content>
     <ion-list>
-      <ion-item class="item-radio" ng-repeat="location in locations">
+      <ion-item class="item-radio item-icon-right" href="#/write">
         <input type="radio" name="group" checked>
+        <h2>不显示地址</h2>
+        <i class="icon radio-icon ion-checkmark"></i>
+      </ion-item>
+      <ion-item class="item-radio" ng-repeat="location in locations">
+        <input type="radio" name="group">
         <div class="item-content">
           <h2>{{location.name}}</h2>
           <p>{{location.address}}</p>

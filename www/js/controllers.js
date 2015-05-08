@@ -50,7 +50,7 @@ angular.module('starter.controllers', [])
   $scope.locations = Locations.all();
 })
 
-.controller('InfoCtrl', function($scope) {
+.controller('BabyCtrl', function($scope) {
 })
 
 .controller('WriteDiaryCtrl', function($scope) {

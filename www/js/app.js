@@ -39,10 +39,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each tab has its own nav history stack:
 
   .state('location', {
-      url: '/location',
-      templateUrl: 'templates/location.html',
-      controller: 'LocationCtrl'
-    })
+    url: '/location',
+    templateUrl: 'templates/location.html',
+    controller: 'LocationCtrl'
+  })
+
+  .state('write', {
+    url: '/write',
+    templateUrl: 'templates/write-diary.html',
+    controller: 'WriteDiaryCtrl'
+  })
 
 
   .state('tab.diary', {
@@ -72,23 +78,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   //   })
 
   .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
+    url: '/chats',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/tab-chats.html',
+        controller: 'ChatsCtrl'
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
+    }
+  })
+  .state('tab.chat-detail', {
+    url: '/chats/:chatId',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/chat-detail.html',
+        controller: 'ChatDetailCtrl'
       }
-    })
+    }
+  })
 
   .state('tab.account', {
     url: '/account',
@@ -100,37 +106,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.register', {
+  .state('register', {
     url: '/register',
-    views: {
-      'tab-register': {
-        templateUrl: 'templates/tab-register.html',
-        controller: 'RegisterCtrl'
-      }
-    }
+    templateUrl: 'templates/register.html',
+    controller: 'RegisterCtrl'
   })
-  .state('tab.baby-info', {
-      url: '/register/babyinfo',
-      views: {
-        'tab-register': {
-          templateUrl: 'templates/baby-info.html',
-          controller: 'InfoCtrl'
-        }
-      }
-    })
 
-  .state('tab.write-diary', {
-      url: '/register/babyinfo/write',
+  .state('tab.baby', {
+      url: '/baby',
       views: {
-        'tab-register': {
-          templateUrl: 'templates/write-diary.html',
-          controller: 'WriteDiaryCtrl'
+        'tab-baby': {
+          templateUrl: 'templates/tab-baby.html',
+          controller: 'BabyCtrl'
         }
       }
     });
 
+  // .state('tab.write-diary', {
+  //     url: '/register/babyinfo/write',
+  //     views: {
+  //       'tab-register': {
+  //         templateUrl: 'templates/write-diary.html',
+  //         controller: 'WriteDiaryCtrl'
+  //       }
+  //     }
+  //   });
+
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/register');
+  $urlRouterProvider.otherwise('/register');
 
 });

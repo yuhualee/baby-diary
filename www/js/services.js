@@ -54,9 +54,6 @@ angular.module('starter.services', [])
 
   // Some fake testing data
   var locations = [{
-    name: '不显示地址',
-    address: ''
-  }, {
     name: '北京市',
     address: ''
   }, {
@@ -65,6 +62,18 @@ angular.module('starter.services', [])
   }, {
     name: '写意人生港式茶餐厅',
     address: '甘露园南里25号朝阳尚街购物中心3层'
+  }, {
+    name: '小饭馆大厨师',
+    address: '朝阳区青年路甘露园南里18号楼东侧'
+  }, {
+    name: '肯德基',
+    address: '甘露园南里25号院国际创展中心底商'
+  }, {
+    name: '甘露园汗蒸会馆',
+    address: '甘露园南里二区5号楼底商'
+  }, {
+    name: '甘露园汗蒸会馆',
+    address: '甘露园南里二区5号楼底商'
   }, {
     name: '朝阳花园',
     address: '北京市朝阳区甘露园南里25号'
