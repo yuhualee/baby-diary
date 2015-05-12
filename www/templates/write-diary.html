@@ -25,10 +25,10 @@
         </span>
       </li>
       <li class="item item-opr">
-        <i class="icon ion-android-cloud-outline"></i>
+        <i class="icon ion-android-cloud-outline" on-tap="action();"></i>
         <i class="icon ion-android-happy"></i>
-        <i class="icon ion-android-microphone"></i>
         <i class="icon ion-bookmark"></i>
+        <i class="icon ion-android-microphone"></i>
       </li>
     </ul>
     <div class="list">
@@ -42,15 +42,84 @@
         <i class="icon ion-chevron-right icon-accessory"></i>
       </a>
     </div>
-    <ul class="list">
-      <li class="item item-icon-right">
+    <ion-list class="">
+      <ion-item class="item-icon-right" href="/#/write/add">
         更多
         <i class="icon ion-chevron-right icon-accessory"></i>
-      </li>
-    </ul>
+      </ion-item>
+    </ion-list>
     <div class="tongbu">
-      <i class="icon ion-android-bulb"></i>
-      <i class="icon ion-android-bulb"></i>
+      <i class="icon ion-android-bulb">朋友圈</i>
+      <i class="icon ion-android-bulb">QQ空间</i>
     </div>
+    <section class="popup">
+      <div class="popup-hd">
+        <span class="cancel">取消</span>
+        <span class="ensure">确定</span>
+      </div>
+      <article class="bd weather">
+        <div class="row">
+          <div class="col">
+            <i class="icon ion-ios-sunny-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-partlysunny-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-cloudy-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-rainy-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-thunderstorm-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-snowy"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <i class="icon ion-ios-moon-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-cloudy-night-outline"></i>
+          </div>
+           <div class="col">
+            <i class="icon ion-ios-sunny-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-partlysunny-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-cloudy-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-rainy-outline"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <i class="icon ion-ios-thunderstorm-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-snowy"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-moon-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-cloudy-night-outline"></i>
+          </div>
+           <div class="col">
+            <i class="icon ion-ios-sunny-outline"></i>
+          </div>
+          <div class="col">
+            <i class="icon ion-ios-partlysunny-outline"></i>
+          </div>
+        </div>
+      </article>
+    </section>
   </ion-content>
 </ion-view>
+

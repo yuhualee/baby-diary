@@ -50,6 +50,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     controller: 'WriteDiaryCtrl'
   })
 
+  .state('add', {
+    url: '/write/add',
+    templateUrl: 'templates/add-record.html',
+    controller: 'AddRecordCtrl'
+  })
+
 
   .state('tab.diary', {
     url: '/diary',
@@ -71,27 +77,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  // .state('diary-detail', {
-  //     url: '/:diaryId',
-  //     templateUrl: 'templates/diary-detail.html',
-  //     controller: 'DiaryDetailCtrl'
-  //   })
 
-  .state('tab.chats', {
-    url: '/chats',
+  .state('tab.first', {
+    url: '/first',
     views: {
-      'tab-chats': {
-        templateUrl: 'templates/tab-chats.html',
-        controller: 'ChatsCtrl'
-      }
-    }
-  })
-  .state('tab.chat-detail', {
-    url: '/chats/:chatId',
-    views: {
-      'tab-chats': {
-        templateUrl: 'templates/chat-detail.html',
-        controller: 'ChatDetailCtrl'
+      'tab-first': {
+        templateUrl: 'templates/tab-first.html',
+        controller: 'FirstCtrl'
       }
     }
   })

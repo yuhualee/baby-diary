@@ -1,0 +1,28 @@
+<ion-view view-title="第一次" class="tab-diary tab-first">
+  <ion-nav-bar class="bar-stable bar-assertive" >
+    <ion-nav-buttons side="left">
+        <button class="button button-icon icon ion-ios-search-strong"></button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right">
+        <a href="#/write" class="button button-icon icon ion-android-add"></a>
+      </ion-nav-buttons>
+  </ion-nav-bar>
+   <ion-content>
+    <div class="diary-list">
+      <div class="card" ng-repeat="diary in diarys">
+        <ion-list class="">
+          <ion-item class="breif">
+            <span class="first">{{diary.memorabilia}}</span>
+            <span class="time item-note">{{diary.birth}}</span>
+          </ion-item>
+          <ion-item class="item item-body diary-bd" href="#/tab/diary/{{diary.id}}">
+              <p class="content">
+                {{diary.content}}
+              </p>
+              <i class="icon {{diary.sound}}"></i>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

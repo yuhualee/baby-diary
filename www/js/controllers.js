@@ -25,17 +25,13 @@ angular.module('starter.controllers', [])
  };
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  }
+.controller('FirstCtrl', function($scope, Diarys) {
+  $scope.diarys = Diarys.all();
+  $scope.remove = function(diary) {
+    Diarys.remove(diary);
+  };
 })
 
-
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
 
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
@@ -54,6 +50,10 @@ angular.module('starter.controllers', [])
 })
 
 .controller('WriteDiaryCtrl', function($scope) {
+  
+})
+
+.controller('AddRecordCtrl', function($scope) {
 })
 
 .controller('DiaryDetailCtrl', function($scope, $ionicActionSheet, $timeout,$stateParams,$ionicBackdrop, Diarys) {

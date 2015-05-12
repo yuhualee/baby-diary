@@ -20,12 +20,16 @@ $positive:                        #ff3355 !default;
 $gray:                            #999999 !default;
 $lightgray:                       #e6e6e6 !default;
 $secondary:                       #e4c685 !default;
+$blue:                            #538ffb !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+.list,.list:last-child{
+	margin-bottom: 10px;
+}
 .input-label{
 	max-width: 100px;
 	width: 20%;
@@ -34,11 +38,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .item-icon-left .icon:before, .item-icon-right .icon:before{
 	color: $gray;
 	font-size: 18px;
-}
-.item-radio{
-	.radio-group{
-		width: 100%;
-	}
 }
 .card, .list-inset{
 	border-radius: 5px;
@@ -54,7 +53,54 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .pane{
 	background-color: $lightgray;
 }
+
+.popup{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1111;
+	width: 100%;
+	height: 200px;
+	background-color: $stable;
+	border-top: 1px solid $lightgray;
+	display: none;
+	.popup-hd{
+		height: 40px;
+		line-height: 40px;
+		border-bottom: 1px solid $lightgray;
+		overflow: hidden;
+		color: $blue;
+		padding: 0 16px;
+		// background-color: #fff;
+		font-size: 14px;
+		.cancel{
+			float: left;
+			cursor: pointer;
+		}
+		.ensure{
+			float: right;
+			cursor: pointer;
+		}
+	}
+	.bd{
+		.icon{
+			color: $dark;
+		}
+		&.weather{
+			text-align: center;
+			font-size: 40px;
+		}
+	}
+}
+
 .register{
+	.list{
+		margin-bottom: 10px;
+		.item-select select{
+			width: 70%;
+		}
+	}
 	.birth{
 		.item-note{
 			color: $positive;
@@ -62,8 +108,36 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 			padding-right: 10px;
 		}
 	}
+	.item-sex{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -moz-flex;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align:center;
+		-webkit-align-items:center;
+		-moz-align-items:center;
+		align-items: center;
+		padding: 6px 0 5px 16px;
+		.radio-group{
+			display: inline-block;
+			label{
+				margin-right: 20px;
+				input{
+					position: static;
+					left: 0;
+					appearance:normal;
+					-moz-appearance:normal; /* Firefox */
+					-webkit-appearance:normal; /* Safari 和 Chrome */
+					margin-right: 3px;
+				}
+			}
+		}
+	}
 	.upload-avatar{
 		text-align: center;
+		margin-top: 40px;
 		.up-button{
 			display: block;
 			width: 60px;
@@ -243,6 +317,24 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 					}
 				}
 			}
+		}
+	}
+}
+.tab-first{
+	.breif{
+		.first{
+			color: $positive;
+		}
+	}
+	.item-body{
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		.icon{
+			font-size: 40px;
+			display: block;
+			color: $gray;
+			margin: 20px auto 0;
+			text-align: center;
 		}
 	}
 }

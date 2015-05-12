@@ -7619,6 +7619,9 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.list, .list:last-child {
+  margin-bottom: 10px; }
+
 .input-label {
   max-width: 100px;
   width: 20%;
@@ -7627,9 +7630,6 @@ a.button {
 .item-icon-left .icon:before, .item-icon-right .icon:before {
   color: #999999;
   font-size: 18px; }
-
-.item-radio .radio-group {
-  width: 100%; }
 
 .card, .list-inset {
   border-radius: 5px; }
@@ -7645,12 +7645,73 @@ a.button {
 .pane {
   background-color: #e6e6e6; }
 
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1111;
+  width: 100%;
+  height: 200px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #e6e6e6;
+  display: none; }
+  .popup .popup-hd {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
+    color: #538ffb;
+    padding: 0 16px;
+    font-size: 14px; }
+    .popup .popup-hd .cancel {
+      float: left;
+      cursor: pointer; }
+    .popup .popup-hd .ensure {
+      float: right;
+      cursor: pointer; }
+  .popup .bd .icon {
+    color: #444; }
+  .popup .bd.weather {
+    text-align: center;
+    font-size: 40px; }
+
+.register .list {
+  margin-bottom: 10px; }
+  .register .list .item-select select {
+    width: 70%; }
 .register .birth .item-note {
   color: #ff3355;
   text-align: center;
   padding-right: 10px; }
+.register .item-sex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  padding: 6px 0 5px 16px; }
+  .register .item-sex .radio-group {
+    display: inline-block; }
+    .register .item-sex .radio-group label {
+      margin-right: 20px; }
+      .register .item-sex .radio-group label input {
+        position: static;
+        left: 0;
+        appearance: normal;
+        -moz-appearance: normal;
+        /* Firefox */
+        -webkit-appearance: normal;
+        /* Safari 和 Chrome */
+        margin-right: 3px; }
 .register .upload-avatar {
-  text-align: center; }
+  text-align: center;
+  margin-top: 40px; }
   .register .upload-avatar .up-button {
     display: block;
     width: 60px;
@@ -7783,6 +7844,18 @@ a.button {
     margin-bottom: 5%; }
     .tab-diary .diary-list .card .list .diary-bd .pic-box img:nth-of-type(n+3) {
       margin-right: 0; }
+
+.tab-first .breif .first {
+  color: #ff3355; }
+.tab-first .item-body {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px; }
+  .tab-first .item-body .icon {
+    font-size: 40px;
+    display: block;
+    color: #999999;
+    margin: 20px auto 0;
+    text-align: center; }
 
 .diary-detail .diary-list .card .list .breif .item-note .icon {
   padding: 0 10px; }

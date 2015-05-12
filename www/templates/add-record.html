@@ -1,35 +1,13 @@
-<ion-view view-title="register" class="register">
+<ion-view view-title="身高体重" class="register">
   <ion-nav-bar class="bar-stable bar-assertive" >
     <ion-nav-buttons side="right">
-      <a href="#/tab/baby" class="button">保存</a>
+      <a href="#/write" class="button">保存</a>
     </ion-nav-buttons>
 </ion-nav-bar>
   <ion-content>
-    <ion-list class="">
-      <ion-item class="item-input">
-        <span class="input-label">宝宝姓名</span>
-        <input type="text">
-      </ion-item>
-      <ion-item class="item-input birth">
-        <span class="input-label">出生日期</span>
-        <input type="date">
-        <span class="item-note">距离预产期<br>还有52天</span>
-      </ion-item>
-      <ion-item class="item-sex">
-        <span class="input-label">宝宝性别</span>
-        <div class="radio-group">
-          <label for="">
-            <input type="radio" name="sex" checked="checked">女孩
-          </label>
-          <label for="">
-            <input type="radio" name="sex">男孩
-          </label>
-        </div>
-      </ion-item>
-    </ion-list>
-    <ion-list>
+    <ion-list class="list">
       <ion-item class="item-input item-select">
-        <span class="input-label">出生身高</span>
+        <span class="input-label">身高</span>
         <select name="" id="">
           <option value="">51cm</option>
           <option value="">52cm</option>
@@ -53,7 +31,7 @@
         </select>
       </ion-item>
       <ion-item class="item-input item-select">
-        <span class="input-label">出生体重</span>
+        <span class="input-label">体重</span>
         <select name="" id="">
           <option value="">.0kg</option>
           <option value="">.1kg</option>
@@ -68,11 +46,5 @@
         </select>
       </ion-item>
     </ion-list>
-    <div class="upload-avatar">
-      <span class="up-button">
-        <input type="file">
-      </span>
-      宝宝头像
-    </div>
   </ion-content>
 </ion-view>

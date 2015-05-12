@@ -1,10 +1,10 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('Firsts', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
+  var firsts = [{
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
@@ -33,15 +33,15 @@ angular.module('starter.services', [])
 
   return {
     all: function() {
-      return chats;
+      return firsts;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    remove: function(first) {
+      firsts.splice(firsts.indexOf(first), 1);
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(firstId) {
+      for (var i = 0; i < firsts.length; i++) {
+        if (firsts[i].id === parseInt(firstId)) {
+          return firsts[i];
         }
       }
       return null;
@@ -93,7 +93,7 @@ angular.module('starter.services', [])
   // Some fake testing data
   var diarys = [{
     id: 0,
-    memorabilia: "第一上次叫妈妈",
+    memorabilia: "第一次叫妈妈",
     weather: "ion-android-cloud-outline",
     mood: "ion-android-happy",
     sound: "ion-android-microphone",
@@ -115,7 +115,7 @@ angular.module('starter.services', [])
     birth: "两周6个月5天"
   }, {
     id: 2,
-    memorabilia: "第一上次喝红酒",
+    memorabilia: "第一次喝红酒",
     weather: "ion-android-cloud-outline",
     mood: "ion-android-happy",
     sound: "ion-android-microphone",
@@ -127,7 +127,7 @@ angular.module('starter.services', [])
     birth: "两周3个月10天"
   }, {
     id: 3,
-    memorabilia: "宝宝第一上次叫妈妈",
+    memorabilia: "宝宝第一次叫妈妈",
     weather: "ion-android-cloud-outline",
     mood: "ion-android-happy",
     sound: "ion-android-microphone",
@@ -139,7 +139,7 @@ angular.module('starter.services', [])
     birth: "两周2个月15天"
   }, {
     id: 4,
-    memorabilia: "宝宝第一上次叫妈妈",
+    memorabilia: "宝宝第一次叫妈妈",
     weather: "ion-android-cloud-outline",
     mood: "ion-android-happy",
     sound: "ion-android-microphone",
